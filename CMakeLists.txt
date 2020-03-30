@@ -210,55 +210,60 @@ if(USE_TENSORRT)
 
          ${TVM_SRC}/src/relay/ir/expr_functor.cc
          ${TVM_SRC}/src/relay/ir/pattern_functor.cc
-         ${TVM_SRC}/src/relay/pass/util.cc
-         ${TVM_SRC}/src/relay/ir/type_functor.cc
-         ${TVM_SRC}/src/relay/ir/type.cc
-         ${TVM_SRC}/src/lang/ir.cc
-         ${TVM_SRC}/src/lang/expr.cc
+         ${TVM_SRC}/src/relay/op/type_relations.cc
+         ${TVM_SRC}/src/tir/ir/op.cc
+         ${TVM_SRC}/src/arith/int_set.cc
+         ${TVM_SRC}/src/tir/ir/expr.cc
          ${TVM_SRC}/src/relay/ir/expr.cc
+         ${TVM_SRC}/src/te/tensor.cc
+         ${TVM_SRC}/src/tir/pass/ir_deep_compare.cc
          ${TVM_SRC}/src/relay/ir/adt.cc
-         ${TVM_SRC}/src/relay/ir/module.cc
-         ${TVM_SRC}/src/relay/pass/pass_manager.cc
-         ${TVM_SRC}/src/lang/attrs.cc
-         ${TVM_SRC}/src/lang/tensor.cc
-         ${TVM_SRC}/src/relay/pass/eta_expand.cc
-         ${TVM_SRC}/src/relay/pass/kind_check.cc
-         ${TVM_SRC}/src/lang/expr_operator.cc
-         ${TVM_SRC}/src/arithmetic/int_set.cc
-         ${TVM_SRC}/src/arithmetic/analyzer.cc
-         ${TVM_SRC}/src/arithmetic/modular_set.cc
-         ${TVM_SRC}/src/arithmetic/const_int_bound.cc
-         ${TVM_SRC}/src/arithmetic/canonical_simplify.cc
-         ${TVM_SRC}/src/arithmetic/rewrite_simplify.cc
-         ${TVM_SRC}/src/arithmetic/ir_mutator_with_analyzer.cc
-         ${TVM_SRC}/src/pass/ir_mutator.cc
-         ${TVM_SRC}/src/pass/ir_deep_compare.cc
-         ${TVM_SRC}/src/pass/simple_passes.cc
-         ${TVM_SRC}/src/pass/ir_visitor.cc
-         ${TVM_SRC}/src/relay/ir/pretty_printer.cc
-         ${TVM_SRC}/src/relay/ir/doc.cc
-         ${TVM_SRC}/src/relay/pass/dependency_graph.cc
-         ${TVM_SRC}/src/node/reflection.cc
-         ${TVM_SRC}/src/arithmetic/stmt_simplify.cc
+         ${TVM_SRC}/src/arith/canonical_simplify.cc
+         ${TVM_SRC}/src/arith/rewrite_simplify.cc
+         ${TVM_SRC}/src/arith/ir_mutator_with_analyzer.cc
+         ${TVM_SRC}/src/tir/ir/stmt_functor.cc
+         ${TVM_SRC}/src/tir/ir/expr_functor.cc
+         ${TVM_SRC}/src/tir/ir/stmt.cc
+         ${TVM_SRC}/src/arith/const_int_bound.cc
+         ${TVM_SRC}/src/tir/ir/data_layout.cc
+         ${TVM_SRC}/src/tir/pass/simple_passes.cc
+         ${TVM_SRC}/src/ir/expr.cc
+         ${TVM_SRC}/src/ir/type.cc
+         ${TVM_SRC}/src/ir/tensor_type.cc
+         ${TVM_SRC}/src/ir/attrs.cc
+         ${TVM_SRC}/src/ir/op.cc
+         ${TVM_SRC}/src/arith/analyzer.cc
+         ${TVM_SRC}/src/arith/modular_set.cc
+         ${TVM_SRC}/src/arith/stmt_simplify.cc
+         ${TVM_SRC}/src/node/repr_printer.cc
+         ${TVM_SRC}/src/ir/env_func.cc
+         ${TVM_SRC}/src/relay/pass/util.cc
+         ${TVM_SRC}/src/ir/type_functor.cc
+         ${TVM_SRC}/src/ir/module.cc
          ${TVM_SRC}/src/relay/pass/type_infer.cc
+         ${TVM_SRC}/src/ir/error.cc
          ${TVM_SRC}/src/relay/pass/type_solver.cc
-         ${TVM_SRC}/src/lang/api_registry.cc
+         ${TVM_SRC}/src/relay/ir/transform.cc
+         ${TVM_SRC}/src/ir/transform.cc
+         ${TVM_SRC}/src/node/reflection.cc
+         ${TVM_SRC}/src/relay/pass/kind_check.cc
+         ${TVM_SRC}/src/printer/relay_text_printer.cc
+         ${TVM_SRC}/src/printer/doc.cc
+         ${TVM_SRC}/src/relay/pass/dependency_graph.cc
          ${TVM_SRC}/src/relay/pass/match_exhaustion.cc
          ${TVM_SRC}/src/node/serialization.cc
-         ${TVM_SRC}/src/relay/ir/alpha_equal.cc
-         ${TVM_SRC}/src/relay/ir/error.cc
+         ${TVM_SRC}/src/relay/pass/eta_expand.cc
+         ${TVM_SRC}/src/ir/type_relation.cc
          ${TVM_SRC}/src/relay/pass/de_duplicate.cc
+         ${TVM_SRC}/src/te/operation/compute_op.cc
+         ${TVM_SRC}/src/te/schedule/message_passing.cc
+         ${TVM_SRC}/src/te/operation/op_util.cc
+         ${TVM_SRC}/src/tir/pass/ir_util.cc
+         ${TVM_SRC}/src/te/operation/cross_thread_reduction.cc
+         ${TVM_SRC}/src/te/operation/tensorize.cc
+         ${TVM_SRC}/src/tir/pass/arg_binder.cc
+         ${TVM_SRC}/src/relay/ir/alpha_equal.cc
          ${TVM_SRC}/src/relay/pass/well_formed.cc
-         ${TVM_SRC}/src/relay/ir/op.cc
-         ${TVM_SRC}/src/relay/op/type_relations.cc
-         ${TVM_SRC}/src/op/compute_op.cc
-         ${TVM_SRC}/src/schedule/message_passing.cc
-         ${TVM_SRC}/src/op/op_util.cc
-         ${TVM_SRC}/src/pass/ir_util.cc
-         ${TVM_SRC}/src/op/cross_thread_reduction.cc
-         ${TVM_SRC}/src/lang/data_layout.cc
-         ${TVM_SRC}/src/op/tensorize.cc
-         ${TVM_SRC}/src/pass/arg_binder.cc
          ${TVM_SRC}/src/relay/ir/base.cc
          ${TVM_SRC}/src/relay/backend/contrib/tensorrt/common_utils.cc
          )
